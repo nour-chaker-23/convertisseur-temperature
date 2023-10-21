@@ -6,10 +6,14 @@
 </head>
 <body>
   <h1>Convertisseur de Température</h1>
-  <label for="celsius">Celsius:</label>
-  <input type="number" id="celsius">
-  <label for="fahrenheit">Fahrenheit:</label>
-  <input type="number" id="fahrenheit" disabled>
+  <select name="unite" id="unite" onchange="change()">
+    <option value="celsius">celsius to fahrenheit</option>
+    <option value="fahrenheit">fahrenheit to celsius</option>
+  </select>
+  <label for="celsius" id="first label">Celsius:</label>
+  <input type="number" id="first field">
+  <label for="fahrenheit" id="second label">Fahrenheit:</label>
+  <input type="number" id="second field" disabled>
   <button onclick="convertTemperature()">Convertir</button>
 
   <script src="script.js"></script>
