@@ -1,24 +1,31 @@
 function convertTemperature() {
-  var celsiusInput = document.getElementById("celsius");
-  var fahrenheitInput = document.getElementById("fahrenheit");
-  var errorMessage = document.getElementById("error-message");
-  
-  // Réinitialiser le message d'erreur précédent.
-  errorMessage.textContent = "";
+  var celsius = parseFloat(document.getElementById("celsius").value);
+  var selectedUnit = document.getElementById("unitChosen").value;
+  var warning = document.getElementById("warning");
 
-  var celsius = parseFloat(celsiusInput.value);
-  
   if (isNaN(celsius)) {
-    errorMessage.textContent = "Veuillez entrer une valeur numérique en degrés Celsius.";
-    fahrenheitInput.value = "";
+    // Display a warning message
+    warning.textContent = "Invalid input. Please enter valid data.";
+    var unitConverted = "";
   } else {
-    var fahrenheit = (celsius * 9/5) + 32;
-    fahrenheitInput.value = fahrenheit;
+    warning.textContent = "";
+    switch (selectedUnit) {
+      case "fahrenheit":
+        var unitConverted = (celsius * 9) / 5 + 32;
+        break;
+      case "kelvin":
+        var unitConverted = celsius + 273.15;
+    }
   }
+  document.getElementById("unitValue").value = unitConverted;
 }
 
-function copyText(){
-  var Text = document.getElementById("fahrenheit"); 
-  Text.select(); 
-  navigator.clipboard.writeText(Text.value); 
+function copyText() {
+  var unitConverted = document.getElementById("unitValue").value;
+  if (unitConverted !== "") {
+    var Text = document.getElementById("unitValue");
+    Text.select();
+    navigator.clipboard.writeText(Text.value);
+    alert("Value copied successfully");
+  }
 }
