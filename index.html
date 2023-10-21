@@ -3,40 +3,31 @@
 <head>
   <title>Convertisseur de Température</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <style>
-    .error-message {
-      color: red;
-    }
-  </style>
+
 </head>
 <body>
+
+  <div id="google_translate_element"></div>
+
   <h1>Convertisseur de Température</h1>
+
+  <select id="language">
+    <option value="english">English</option>
+    <option value="french">Français</option>
+  </select>
+
   <label for="celsius">Celsius:</label>
-  <input type="number" id="celsius" value="0">
-  <input type="text" pattern="[0-9]*.[0-9]*" id="celsius" required>
+
+  <input type="number" id="celsius">
+
   <label for="fahrenheit">Fahrenheit:</label>
-<label for="zoneTexte">Guide d'utilisation du Convertisseur de Température <br>
-    Bienvenue dans l'application "Convertisseur de Température" ! <br>
-    Cette application vous permet de convertir rapidement et facilement des températures entre les échelles Celsius et Fahrenheit. Suivez ces étapes simples pour utiliser l'application :<br>
-    Conversion de Celsius à Fahrenheit<br>
-    1.	Sélectionnez l'unité de départ : Par défaut, l'application est réglée sur Celsius. Si vous avez une température en Celsius que vous souhaitez convertir en Fahrenheit, vous êtes prêt à continuer.<br>
-    2.	Entrez la température en Celsius : Saisissez la valeur de la température que vous souhaitez convertir dans le champ prévu à cet effet.<br>
-    3.	Cliquez sur "Convertir" : Appuyez sur le bouton "Convertir" pour obtenir instantanément la conversion en Fahrenheit.<br>
-    Conversion de Fahrenheit à Celsius<br>
-    1.	Sélectionnez l'unité de départ : Si vous avez une température en Fahrenheit que vous souhaitez convertir en Celsius, assurez-vous de sélectionner "Fahrenheit" comme unité de départ.<br>
-    2.	Entrez la température en Fahrenheit : Saisissez la valeur de la température en Fahrenheit dans le champ prévu à cet effet.<br>
-    3.	Cliquez sur "Convertir" : Appuyez sur le bouton "Convertir" pour obtenir instantanément la conversion en Celsius.<br>
-    Résultats<br>
-    Une fois que vous avez cliqué sur "Convertir", la température convertie apparaîtra immédiatement sous le bouton. Les résultats sont affichés avec une précision de décimales.<br>
-    C'est aussi simple que ça ! <br>
-    L'application "Convertisseur de Température" vous permet de réaliser des conversions de température rapidement et efficacement. Profitez de son utilité pour répondre à vos besoins de conversion de température au quotidien.<br>
-    N'hésitez pas à explorer l'application et à découvrir à quel point il est facile de passer d'une échelle de température à une autre.<br>
-    Pour toute question supplémentaire ou pour obtenir de l'aide, n'hésitez pas à nous contacter.<br>
-    </label>
-  <input type="text"  id="fahrenheit" disabled>
+  <input type="number" id="fahrenheit" disabled>
+
   <button onclick="convertTemperature()">Convertir</button>
-  <button onclick="copyText()">Copy</button>
-  <img src="4.svg" alt="1">
+
+  <button id="translate_button">Translate</button>
+
+
   <script src="script.js"></script>
   <script>
     var temperatureInput = document.getElementById("celsius");
