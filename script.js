@@ -16,3 +16,9 @@ function convertTemperature() {
     fahrenheitInput.value = fahrenheit;
   }
 }
+
+function copyText(){
+  var Text = document.getElementById("fahrenheit"); 
+  Text.select(); 
+  navigator.clipboard.writeText(Text.value); 
+}
