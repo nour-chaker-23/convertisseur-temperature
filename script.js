@@ -22,3 +22,5 @@ function copyText(){
   Text.select(); 
   navigator.clipboard.writeText(Text.value); 
 }
+
+
