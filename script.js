@@ -11,6 +11,7 @@ function convertTemperature() {
   
 }
 function change(){
+  
   if (unit=="fahrenheit"){
     unit="celsius"
     document.getElementById("second label").innerHTML="Celsius:";
