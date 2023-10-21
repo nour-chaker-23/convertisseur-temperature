@@ -1,4 +1,10 @@
 function convertTemperature() {
+
+  var celsius = parseFloat(document.getElementById("celsius").value);
+  var fahrenheit = (celsius * 9/5) + 32;
+  fahrenheit = fahrenheit.toFixed(2);
+  document.getElementById("fahrenheit").value = fahrenheit;
+
   var celsiusInput = document.getElementById("celsius");
   var fahrenheitInput = document.getElementById("fahrenheit");
   var errorMessage = document.getElementById("error-message");
@@ -15,6 +21,7 @@ function convertTemperature() {
     var fahrenheit = (celsius * 9/5) + 32;
     fahrenheitInput.value = fahrenheit;
   }
+
 }
 
 function copyText(){
