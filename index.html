@@ -3,7 +3,7 @@
 <head>
   <title>Convertisseur de Température</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 <body>
 
@@ -17,6 +17,7 @@
   </select>
 
   <label for="celsius">Celsius:</label>
+
   <input type="number" id="celsius">
 
   <label for="fahrenheit">Fahrenheit:</label>
@@ -26,6 +27,19 @@
 
   <button id="translate_button">Translate</button>
 
+
   <script src="script.js"></script>
+  <script>
+    var temperatureInput = document.getElementById("celsius");
+    temperatureInput.addEventListener("keypress", function (e) {
+      var keyCode = e.which || e.keyCode;
+      if ((keyCode >= 48 && keyCode <= 57) || (keyCode === 8) || (keyCode === 46)) {
+        return true;
+      } else {
+        e.preventDefault();
+        return False;
+      }
+    });
+    </script>
 </body>
 </html>
