@@ -1,23 +1,66 @@
+
+
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
   margin: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-image: url('adobestock-114121954-960x640.jpeg'); /* Replace 'path-to-your-image.jpg' with the actual image file path */
+  background-size: cover; /* Scale the image to cover the entire background */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Keep the image fixed as the user scrolls */
+}
+.centered {
+  text-align: center; /* Centre horizontalement le texte */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre verticalement les éléments */
+  width: 300px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+  margin: 50px; /* Ajustez la valeur de la marge selon vos préférences */
+  margin-left: 65%;
 }
 
+
 h1 {
-  color: #333;
+  color: #f7f7f7;
+  text-align: right;
+  font-size: 40px;
+  
 }
 
 input[type="number"] {
-  width: 60px;
+  /*width: 60px;*/
   padding: 5px;
   margin: 10px;
+  width: 120px; /* Ajuste la largeur des champs d'entrée */
+  height: 40px; /* Ajuste la hauteur des champs d'entrée */
+  font-size: 18px; /* Ajuste la taille de la police dans les champs d'entrée */
+  
+ 
 }
-
 button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #1a6fd1; /* Default background color */
+  width: 120px;
+  height: 40px;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+
+  
+}
+
+button:hover, button:focus {
+  background-color: #555; /* Background color on hover or focus */
+}
+
+/* Add box shadow for a raised effect */
+button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
